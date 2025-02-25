@@ -1,3 +1,5 @@
+from stats import word_count
+
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
@@ -10,10 +12,6 @@ def main():
     for item in letter_count:
         if item.isalpha():
             print(f"The '{item}' character was found {letter_count[item]} times")
-
-def word_count(text):
-    words = text.split()
-    return len(words)
 
 def get_book_text(path):
     with open(path) as f:
